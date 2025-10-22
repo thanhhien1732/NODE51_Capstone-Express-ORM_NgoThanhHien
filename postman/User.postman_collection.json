@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "c3ce77ff-03e1-4401-b258-315b5a67fba4",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46604225",
+		"_collection_link": "https://lunar-water-4829499.postman.co/workspace/Capstone_Express_ORM~4c090ec4-18aa-4b21-a7cb-d32af3a596d4/collection/46604225-c3ce77ff-03e1-4401-b258-315b5a67fba4?action=share&source=collection_link&creator=46604225"
+	},
+	"item": [
+		{
+			"name": "Avatar Cloud",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "anh_dai_dien",
+							"type": "file",
+							"src": "/C:/Users/LENOVO/Downloads/Bắp.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3060/api/user/avatar-cloud",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"user",
+						"avatar-cloud"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3060/api/user/?page=1&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"user",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find One",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3060/api/user/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"user",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"nguyenvanb@gmail.com\",\r\n  \"ho_ten\": \"Nguyen Van B\",\r\n  \"tuoi\": 28,\r\n  \"mat_khau\": \"12345\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3060/api/user/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"user",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3060/api/user/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"user",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

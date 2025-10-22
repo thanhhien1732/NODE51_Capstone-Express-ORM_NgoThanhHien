@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "95675bb5-c376-47ea-b149-aa33cd3d2074",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46604225",
+		"_collection_link": "https://lunar-water-4829499.postman.co/workspace/Capstone_Express_ORM~4c090ec4-18aa-4b21-a7cb-d32af3a596d4/collection/46604225-95675bb5-c376-47ea-b149-aa33cd3d2074?action=share&source=collection_link&creator=46604225"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"bapbap@gmail.com\",\r\n    \"mat_khau\": \"1234\",\r\n    \"ho_ten\": \"Bap\",\r\n    \"tuoi\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3060/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const data = pm.response.json()\r",
+							"console.log(data)\r",
+							"\r",
+							"pm.globals.set(\"accessToken\",  data.data.accessToken )\r",
+							"pm.globals.set(\"refreshToken\",  data.data.refreshToken )"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"thanhhien1732@gmail.com\",\r\n    \"mat_khau\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3060/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refesh Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const data = pm.response.json()\r",
+							"console.log(data)\r",
+							"\r",
+							"pm.globals.set(\"accessToken\",  data.data.accessToken )\r",
+							"pm.globals.set(\"refreshToken\",  data.data.refreshToken )"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accessToken\": \"{{accessToken}}\",\r\n    \"refreshToken\": \"{{refreshToken}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3060/api/auth/refresh-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"auth",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

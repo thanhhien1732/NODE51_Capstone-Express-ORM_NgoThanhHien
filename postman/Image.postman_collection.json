@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "9b5f0488-d5f2-4af0-8e4c-801b0b0d2c4f",
+		"name": "Image",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46604225",
+		"_collection_link": "https://lunar-water-4829499.postman.co/workspace/Capstone_Express_ORM~4c090ec4-18aa-4b21-a7cb-d32af3a596d4/collection/46604225-9b5f0488-d5f2-4af0-8e4c-801b0b0d2c4f?action=share&source=collection_link&creator=46604225"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/LENOVO/Downloads/BongSon.jpg"
+						},
+						{
+							"key": "mo_ta",
+							"value": "\"Ảnh phong cảnh Bồng Sơn\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3060/api/image/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"image",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3060/api/image/?limit=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"image",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find By User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3060/api/image/user/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"image",
+						"user",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3060/api/image/search/name?keyword=b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"image",
+						"search",
+						"name"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3060/api/image/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"image",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3060/api/image/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3060",
+					"path": [
+						"api",
+						"image",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
