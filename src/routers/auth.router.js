@@ -1,7 +1,5 @@
 import express from 'express';
 import { authController } from '../controllers/auth.controller';
-import { protect } from '../common/middlewares/protect.middleware';
-import { checkPermission } from '../common/middlewares/check-permission.middleware';
 
 const authRouter = express.Router();
 
