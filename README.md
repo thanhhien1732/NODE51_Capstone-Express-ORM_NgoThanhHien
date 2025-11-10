@@ -157,14 +157,10 @@ http://localhost:3060/api/docs
 
 ---
 
-## 🧱 Author
+## 👨‍💻 Author
 
-**👤 Thanh Hiền Ngô**  
-Technical Artist / Backend Developer  
-📧 [thanhhien1732@gmail.com](mailto:thanhhien1732@gmail.com)
-
----
-
-## 🧭 License
-Educational project for CyberSoft Academy Capstone.  
-Feel free to fork and enhance it for learning.
+**Ngô Thanh Hiền** - Backend Developer  
+📧 [thanhhien1732@gmail.com](mailto:thanhhien1732@gmail.com)  
+🎓 CyberSoft Academy - Capstone Project  
+💻 Backend Developer | Express | Prisma | MySQL  
+🗓️ 2025
